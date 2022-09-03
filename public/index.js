@@ -1,6 +1,8 @@
-//
-//
-
+/*
+This file is going to function all the calculations and functions of this stand-alone
+calculator .
+all other server side files are going into trash.
+*/
 let detailsDiv = document.getElementById("details");
 let resultDiv = document.getElementById("result");
 detailsDiv.style.visibility = "collapse";
