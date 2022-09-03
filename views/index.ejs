@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            text-align: center;
+            background-color: rgb(249, 245, 245);
+        }
+        h1{
+            margin: 10px;
+            color: green;
+        }
+        form{
+            padding: 10px;
+        }
+        label{
+            margin: 5px;
+        }
+        input{
+            margin: 5px;
+        }
+        .result{
+            border: 4mm ridge rgb(185, 166, 169);
+            width: 50%;
+            display: inline-block;
+
+        }
+        .border-grey{
+            border: 4mm ridge rgb(152, 209, 149);
+        }
+
+        h2{
+            display: inline-block;
+            color: darkorange;
+            font-size: 32px;
+
+        }
+        #res{
+            color: purple;
+        }
+
+        .h2final{
+            color:aqua;
+            font-size: 28px;
+        }
+        .h2details{
+            font-size: 18px;
+            color: fuchsia;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <p><em>This is simple Calculator</em></p>
+    <br>
+    <h1>Today is : <%= day%> </h1>
+    <br>
+    <form action="/index.html" method="post">
+        <label for="number1">Number 1</label><br>
+        <input type="number" name="number1" id="number1" required><br>
+        <label for="number1">Number 2</label>
+        <br>
+        <input type="number" name="number2" id="number2" required><br>
+        <input type="button" value="Submit" onclick="sendData();">
+    </form>
+    <br>
+    <div id="result" class="result" >
+        <h2 class="h2result" id="h2res"></h2>
+        <h2 id="res"></h2>
+    </div>
+    <div id="details" class="result border-grey" >
+        <h2 class="h2final">Server Response details</h2>
+        <h3 class="h2details" id="num1iseven"></h3>
+        <h3 class="h2details" id="num2iseven"></h3>
+        <h3 class="h2details" id="operator"></h3>
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
